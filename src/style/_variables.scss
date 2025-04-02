@@ -1,0 +1,62 @@
+//---------------app color palette to follow the 60%(primary color) 30%(secondary color) 10%(call to action indicators) approch -----//
+// light theme
+$white: #ffffff; // 60%
+$light-gray: #EBEDF9; // 30%
+$dark-red:#BD151E; // 10%
+$light-blue: #e7edf8;
+// dark theme
+$dark:  #111827; // 60%
+$light-dark: #161f32; // 30%
+//-----------------------------------//
+
+//-------- colors -------------------/
+//text
+$text-blue: #1492E6;
+$text-dark-gray: #353A3C;
+$text-light-gray: #959595;
+$text-light-red: tomato;
+// border
+$border-light: #353A3C;
+$border-light_2: #e5e7ebed;
+$border-light-blue:#C1DEFF;
+// other colors
+$light-gray: #707070;
+$green: #9CFF2E;
+$modal: #000000b3;
+//---------------------------------//
+
+//--------- measurments -----------//
+$top-nav-1-height: 100px;
+$top-nav-2-height: 50px;
+$side-nav-width:  min( 250px,90%);
+$header-height: 60px;
+// Z-index
+$zindex-side-nav: 99;
+$zindex-top-nav: 9;
+$zindex-modal: 999999999999;
+//----------------------------------//
+
+:root {
+  --dark-red: #{$dark-red};
+  --light-blue : #{$light-blue};
+  --light-gray : #{$light-gray};
+  --white: #{$white};
+
+  --text-blue: #{$text-blue};
+  --text-light-gray: #{$text-light-gray};
+  --text-dark-gray: #{$text-dark-gray};
+  --border-light-blue :#{$border-light-blue};
+}
+
+[dark-theme=true]{
+  --dark-red: #{$dark-red};
+  --light-blue : #{$dark};
+  --light-gray : #{$dark};
+  --white: #{$light-dark};
+
+  --text-blue: #{$text-blue};
+  --text-light-gray: #{$text-dark-gray};
+  --text-dark-gray: #{$text-light-gray};
+
+  --border-light-blue :#{$dark};
+}

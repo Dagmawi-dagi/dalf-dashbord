@@ -1,0 +1,11 @@
+@import '../../../style/variables';
+@import '../../../style/mixins';
+@import '../../../style/global.scss';
+
+.container{
+    @include transition($prop: onlytheme);
+    margin: 0 1rem;
+    padding: 1rem 10px;
+    background-color: var(--white);
+    height: 100vh;
+}

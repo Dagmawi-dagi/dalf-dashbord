@@ -1,0 +1,36 @@
+@import '../../../../style/variables';
+@import '../../../../style/mixins';
+@import '../../../../style/global.scss';
+
+.head{
+    text-transform: capitalize;
+    color: var(--text-blue);
+    font-size: calc( .2vw + 16px );
+    margin-bottom: 1rem;
+}
+
+.info{
+    min-height: 30px;
+    height: inherit !important;
+    max-height: none !important;
+    &.err_space{
+        padding-bottom: 1.2rem; 
+    }
+}
+
+
+.Rinput{
+    position: absolute;
+    top: 3px;
+    width: max(25%,200px );
+    margin: unset;
+    margin-left: max(24%,115px);
+    font-size: 13px;
+    :deep(input){
+        padding:  2px 5px;
+        background-color: var(--light-blue);
+        color: var( --text-dark-gray);
+        border: 1px solid var(--border-light-blue);
+        border-radius: 1px;
+    }
+}

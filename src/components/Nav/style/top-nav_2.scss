@@ -1,0 +1,22 @@
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+nav{
+  @include transition($prop: onlytheme);
+  background-color: var(--white);
+  height: $top-nav-2-height;
+  border-bottom: 1px solid var(--border-light-blue);
+}
+
+.container{
+  @include flexbox($justify-content: space-between);
+
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+
+  & img{
+    height: 100%;
+    cursor: pointer;
+  }
+}

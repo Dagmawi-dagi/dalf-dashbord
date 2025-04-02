@@ -1,0 +1,53 @@
+@import '../../../../style/variables';
+@import '../../../../style/mixins';
+
+
+.employee-archive-container{
+  @include transition($prop: 'onlytheme');
+  margin:0  1rem;
+  padding: 1rem 10px;
+  background-color: var(--white);
+  color: var(--text-dark-gray);
+  min-height: 100%;
+}
+
+.info-container{
+  margin-top: 2rem;
+}
+
+.header{
+  text-transform: capitalize;
+  color: var(--text-blue);
+  font-size: calc( .1vw + 14px );
+}
+
+.employee-card{
+  font-size: 80%;
+  margin-left: auto;
+  span.active{
+    background-color: $green;
+    color: #fff;
+    padding: 0 1rem;
+  }
+  span.expired{
+    background-color: $dark-red;
+    color: #fff;
+    padding: 0 1rem;
+  }
+}
+
+.data_list :deep(.fixed) {
+  position: unset;
+}
+
+.data_list :deep(.raw) {
+  @include transition($prop: (border-color: .2s) );
+  margin-top: 0;
+  border: 1px solid var(--border-light-blue);
+  border-left-color: var(--white);
+  border-right-color: var(--white);
+}
+
+
+
+

@@ -1,0 +1,28 @@
+@import '../../../style/variables';
+@import '../../../style/mixins';
+@import '../../../style/global';
+
+.inner_container{
+    background-color: var(--white);
+    color: var(--text-dark-gray);
+    width: fit-content;
+    
+    margin: auto;
+    padding: 1rem;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+
+
+.RRadio{
+  width: min(90%,400px);
+  margin-left: 0;
+}
+
+
+.custom_btn_1{
+    :beep(.btn){
+        width: 1000px;
+    }
+}

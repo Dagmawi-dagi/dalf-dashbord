@@ -1,0 +1,72 @@
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+nav{
+  @include transition($prop:( border:.2s));
+  background-color: var(--white);
+  height: $top-nav-1-height;
+  border-bottom: 1px solid var(--border-light-blue);
+}
+
+.container{
+  @include flexbox($justify-content: space-between);
+
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+
+  & img{
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.company{
+  @include flexbox();
+  width: fit-content;
+  height: 100%;
+  gap: 10px;
+  
+  .logo{
+    width: 35px;
+    max-height: 90%;
+  }
+  .name{
+    color: lightgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+  }
+
+}
+
+.search-container{
+  display: flex; 
+  flex-wrap: wrap; 
+  max-width: 800px; 
+  gap: 10px;
+  margin-left: auto;
+}
+
+.input{
+  margin: unset;
+  width: 250px !important;
+  font-size: 13px;
+  :deep(input){
+    background-color: var(--light-blue);
+    color: var( --text-dark-gray);
+    border: 1px solid var(--border-light-blue);
+    padding: 2px 5px;
+  }
+}
+
+.search-btn-container{
+  margin-right: auto;
+}
+
+.search-btn{
+  :deep(button){
+    padding: 2px 5px;
+    align-self: flex-end;
+    margin-bottom: 20px;
+  }
+}

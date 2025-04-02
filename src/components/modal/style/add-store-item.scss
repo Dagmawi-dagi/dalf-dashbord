@@ -1,0 +1,11 @@
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+.inner_container{
+    background-color: var(--white);
+    color: var(--text-dark-gray);
+    min-width: min(900px,90%);
+    min-height: 70%;
+    margin: auto;
+    overflow: auto;
+}

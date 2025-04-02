@@ -1,0 +1,10 @@
+@import '../../../style/variables';
+@import '../../../style/mixins';
+@import '../../../style/global.scss';
+
+.head{
+    text-transform: capitalize;
+    color: var(--text-blue);
+    font-size: calc( .2vw + 16px );
+    margin-bottom: 1rem;
+}
