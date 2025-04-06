@@ -6,7 +6,7 @@ export default  {
     // "signUp": {url:"/auth/register",method:'post'},
     "login": {url:"/user/sign_in",method: 'post'},
     "getProfile": {url:"/user/get_me",method: 'get',globally_res_feedback:{err:true}},
-    "updateMe": {url:"/user/update_me",method: 'post'},
+    "updateMe": {url:"/user/update_me",method: 'patch'},
     "updatePassword": { url: "/user/update_password",method: 'post' },
     "updatePhoneNumber": {url:"/user/update_phoneNumber",method: 'post'}
   },

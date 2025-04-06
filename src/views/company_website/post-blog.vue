@@ -18,6 +18,7 @@ function extractFirstWords(html, wordCount = 20) {
 }
 
 function postNewBlogPost (FormData, form$){ 
+    console.log(form$.data.category);
     const formData = FormData
     formData.append('content_short', extractFirstWords(form$.data.content))
     apicall_from_store('blog','blog-create',{ onSucSaveTheJsonOn: 'newly_posted_blog', data:formData , token:true }) 
