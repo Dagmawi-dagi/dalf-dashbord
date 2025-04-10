@@ -4,8 +4,9 @@ import axios from 'axios';
 // composables
 import { use_apicalls_from_store } from '../../composables/store-apicalls';
 
-const { apicall_from_store } = use_apicalls_from_store();
+const { apicall_from_store,apicall_from_store_loading } = use_apicalls_from_store();
 function postNewsletter (FD, form$){ 
+  console.log(form$.data);
   apicall_from_store('newsletter','newsletter-create',{ onSucSaveTheJsonOn: 'newNewsletter', data:form$.data, token: true }) 
 }
 </script>
@@ -39,7 +40,7 @@ function postNewsletter (FD, form$){
           size="sm"
         />
         <TagsElement
-          name="recipients"
+          name="recipientsIds"
           :close-on-select="false"
           :search="true"
           label="recipients"
@@ -47,7 +48,7 @@ function postNewsletter (FD, form$){
           autocomplete="off"
           :items="async function(query, input){
              const res = await axios.get('http://localhost:8888/api/newsletter/subscriber')
-             let mappedData = res.data.data.map(({ _id, name }) => ({ value: _id, label: name }))
+             let mappedData = res.data.data.map(({ id, name }) => ({ value: id, label: name }))
               // mappedData.unshift({ value: 'all', label: 'All' })
               return mappedData
           }"
@@ -63,6 +64,7 @@ function postNewsletter (FD, form$){
           :submits="true"
           size="sm"
           align="center"
+          :loading="apicall_from_store_loading"
         />
       </Vueform>
     </div>
